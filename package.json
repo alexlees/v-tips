@@ -1,6 +1,6 @@
 {
   "name": "v-tips",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "main": "dist/v-tips.umd.js",
   "module": "dist/v-tips.esm.js",
