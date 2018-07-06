@@ -1,0 +1,32 @@
+{
+  "name": "v-tips",
+  "version": "0.0.1",
+  "private": false,
+  "main": "dist/v-tips.umd.js",
+  "module": "dist/v-tips.esm.js",
+  "unpkg": "dist/v-tips.min.js",
+  "description": "开箱即用的vue tips指令",
+  "keywords": [
+    "vue",
+    "v-tips",
+    "vue-directive"
+  ],
+  "homepage": "https://github.com/alexlees/v-tips",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexlees/v-tips"
+  },
+  "scripts": {
+    "build": "yarn run build:umd & yarn run build:es & yarn run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/v-tips.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/v-tips.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/v-tips.min.js",
+    "dev": "rollup --config build/rollup.config.js --format iife --file dist/v-tips.min.js -w"
+  },
+  "devDependencies": {
+    "rollup": "^0.62.0",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-postcss": "^1.6.2"
+  }
+}
